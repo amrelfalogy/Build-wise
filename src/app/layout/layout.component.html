@@ -1,0 +1,86 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-blue fixed-top">
+    <div class="container">
+      <div class="logo" style="width: 20%">
+        <a class="navbar-brand" routerLink="">
+          <img src="assets/imgs/K100mlCopy.png" alt="Kawkaba" />
+        </a>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="home" routerLinkActive="active"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about-us" routerLinkActive="active"
+              >About Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="services" routerLinkActive="active"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="projects" routerLinkActive="active"
+              >Projects</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="contact" routerLinkActive="active"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="navbar-icons d-flex align-items-center">
+          <!-- Icons or other elements can go here -->
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <div class="container">
+    <div class="title">
+      <span>Contact Us</span>
+      <h1>Let's Work Together</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-9 footer-content">
+        <h3 class="footer-title">Get in Touch</h3>
+        <p><span>Phone:</span> 01066041002</p>
+        <p><span>Follow Us</span> for updates:</p>
+        <div class="footer-links">
+          <a href="https://instagram.com/kawkabafragrances">
+            <!-- Insert Instagram icon here -->
+          </a>
+          <a href="https://t.me/kawkabafragrances">
+            <!-- Insert Telegram icon here -->
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3 footer-img">
+        <img src="assets/imgs/IMG_20210922_232711.jpg" alt="Footer Image" />
+      </div>
+    </div>
+  </div>
+  <div class="sub-footer text-center">
+    © Copyright {{ currentYear }} Kawkaba. All rights reserved.
+  </div>
+</footer>
