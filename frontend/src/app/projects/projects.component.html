@@ -1,0 +1,51 @@
+<!-- Hero Section -->
+<div class="row">
+  <div class="col-md-12">
+    <section
+      class="header img-fluid"
+      style="background-image: url('assets/imgs/bw.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content">
+        <h1>Our Projects</h1>
+        <h3>
+          <a routerLink="/home" style="color: inherit; text-decoration: none"
+            >Home</a
+          >
+          - <span> Our Projects </span>
+        </h3>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="projects-section container py-5">
+  <h2 class="text-center mb-5">Meet Our Projects</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let project of projects">
+      <div
+        class="project-card card"
+        [ngClass]="{ 'active-project': project.id === 2 }"
+      >
+        <!-- Overlay for non-active projects -->
+        <div class="overlay" *ngIf="project.id !== 2"></div>
+
+        <img
+          [src]="project.thumbnail"
+          [alt]="project.title"
+          class="card-img-top"
+        />
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <button
+            (click)="project.id === 2 && viewProject(project)"
+            class="btn"
+            [disabled]="project.id !== 2"
+          >
+            View Project
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,223 @@
+/* Hero Section */
+.header {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.header .header-content {
+  display: grid;
+  text-align: center;
+  z-index: 2;
+}
+
+.header-content h1 {
+  font-weight: 700;
+  color: white;
+  font-size: 50px;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+}
+
+.header-content h3 {
+  font-size: 16px;
+  color: #bbb;
+  font-weight: 400;
+}
+.header-content h3 span {
+  color: #f3bc15;
+}
+
+/* offer  */
+.offer {
+  padding: 120px 0;
+}
+
+.offer-section {
+  text-align: center; /* Centers the content */
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.icon-container {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px; /* Centers the icon and adds space below */
+  background: #001f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container span {
+  font-size: 2rem;
+  color: white;
+}
+
+.offer-details h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.offer-details p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* service-section */
+.services-section {
+  z-index: 2;
+  position: relative;
+  margin-bottom: 50px;
+}
+.title {
+  margin: auto;
+  text-align: center;
+}
+.title span {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: #e6b10e;
+}
+.title h1 {
+  color: black;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+@media (max-width: 576px) {
+  .title h1 {
+    font-size: 33px;
+  }
+}
+
+.title p {
+  padding: 6px 10%;
+  color: #666;
+}
+
+.cards-container {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  width: 100%;
+  height: 16rem;
+  margin-top: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0%;
+  position: relative;
+  color: aliceblue;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 51, 95, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    z-index: 2;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: 1;
+    transition: opacity 0.2s ease-out;
+  }
+
+  h2 {
+    font-size: 20px;
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset 0.3s 0.3s ease-out;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  p {
+    inset: auto auto 30px 30px;
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity 0.3s ease-out;
+    font-size: 15px;
+    color: #dddddddd;
+  }
+
+  &:hover h2 {
+    inset: auto auto 180px 30px;
+    transition: inset 0.3s ease-out;
+    z-index: 3;
+  }
+
+  &:hover p {
+    opacity: 1;
+    transition: opacity 0.5s 0.1s ease-in;
+    z-index: 3;
+  }
+
+  &:hover img {
+    transition: opacity 0.3s ease-in;
+    opacity: 1;
+  }
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.btn {
+  margin-bottom: 40px;
+  width: 100%;
+
+  .mybtn {
+    width: 221px;
+    height: 58px;
+    color: #001f3f;
+    border: 1px solid #001f3f;
+    background-color: inherit;
+  }
+  .mybtn:hover {
+    background-color: #001f3f;
+    color: white;
+    border: none;
+  }
+}
+.services-section .btn:active {
+  border: none;
+  outline: none;
+}

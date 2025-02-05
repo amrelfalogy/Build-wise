@@ -1,0 +1,156 @@
+<div class="home">
+  <div class="header">
+    <picture>
+      <source srcset="assets/imgs/h1.webp" type="image/webp" />
+      <img src="assets/imgs/h1.jpg" alt="header background" class="header-bg" />
+    </picture>
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 header-content">
+          <div class="header-title">
+            <h1 class="cinzel-decorative">
+              <span
+                *ngFor="
+                  let word of 'build &nbsp; wise &nbsp; for&nbsp; constructing&nbsp; and&nbsp; marketing'.split(
+                    ' '
+                  );
+                  let i = index
+                "
+                [style.animationDelay]="i * 0.5 + 's'"
+              >
+                {{ word }}
+              </span>
+            </h1>
+          </div>
+          <div class="row">
+            <div class="col-md-9" style="display: flex">
+              <button
+                class="mybtn"
+                routerLink="/contact"
+                style="z-index: 3 !important"
+              >
+                Consult now
+              </button>
+            </div>
+            <div class="notice col-md-3">
+              <h3>We are <span>build wise</span></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message -->
+
+  <section class="message section">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="content container">
+          <h1>build wise company</h1>
+          <p>
+            We are committed not only to providing high-quality products and
+            services, but also to going above and beyond to ensure complete
+            customer satisfaction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ************  services section  ********  -->
+  <div class="services-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title mb-30">
+            <span>let's know about</span>
+            <h1>our services</h1>
+            <p>
+              Discover our commitment to excellence in construction services,
+              from high-quality materials supply to specialized engineering
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row cards-container">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="assets/imgs/s2.jpg" alt="serviceImg" />
+            <div class="overlay"></div>
+            <div class="card-content">
+              <h2>supply of construction materials</h2>
+              <p>
+                We provide top-quality construction materials to support your
+                projects, ensuring durability, safety, and long-term value for
+                your building needs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="assets/imgs/s4.jpg" alt="serviceImg" />
+            <div class="overlay"></div>
+            <div class="card-content">
+              <h2>engineering services</h2>
+              <p>
+                Offering expert engineering solutions tailored to your specific
+                project requirements, from initial design to completion,
+                ensuring excellence in execution.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="assets/imgs/s3.jpg" alt="serviceImg" />
+            <div class="overlay"></div>
+            <div class="card-content">
+              <h2>Specialized Construction</h2>
+              <p>
+                Combining innovation and expertise, we deliver specialized
+                construction services, including post-tensioning, elastomeric
+                bearing, and expansion joints, for optimal structural
+                performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn">
+        <button class="mybtn" routerLink="/services">view all services</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- parallax -->
+  <div class="parallax-section row">
+    <div class="col-md-12">
+      <section
+        class="parallax img-fluid"
+        style="background-image: url('assets/imgs/par.jpg')"
+      >
+        <div class="overlay"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="content container">
+              <h3>Explore Our Expertise</h3>
+              <h1>
+                Discover our projects that blend design, functionality, and
+                excellence.
+              </h1>
+              <div class="btn">
+                <button class="mybtn" routerLink="/projects">
+                  discover now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+<!-- Hero Section -->
+<div class="row">
+  <div class="col-md-12">
+    <section
+      class="header img-fluid"
+      style="background-image: url('assets/imgs/bw.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content">
+        <h1>About Us</h1>
+        <h3>
+          <a routerLink="/home" style="color: inherit; text-decoration: none"
+            >Home</a
+          >
+          - <span> About Us </span>
+        </h3>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Who We Are Section -->
+<div class="about-inchaat">
+  <div class="container">
+    <div class="row" style="justify-content: center">
+      <div class="col-md-6 mb-30">
+        <div class="title">
+          <h1>Who We Are</h1>
+        </div>
+        <div class="about-inchaat-content">
+          <p>
+            Build Wise is a specialized contracting company founded in 2016 in
+            Kuwait, now successfully operating in Bahrain and Saudi Arabia. We
+            are experts in the design, supply, and execution of Post Tensioning
+            concrete for buildings and in providing bearings and expansion
+            joints for buildings and bridges. Our team combines technical
+            expertise with a commitment to quality, delivering tailored
+            solutions for a variety of construction needs. With a wide range of
+            high-quality construction materials, we're equipped to meet the
+            diverse demands of our clients across the region.
+          </p>
+        </div>
+      </div>
+      <div class="about-inchaat-img col-md-6">
+        <picture>
+          <source srcset="assets/imgs/3654.webp" type="image/webp" />
+          <img src="assets/imgs/s4.jpg" alt="about img" class="header-bg" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- mission and vision -->
+<div class="mission-vision">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 our-mission">
+        <h3>our mission</h3>
+        <p>
+          We aim to proactively address industry challenges to improve project
+          outcomes for our clients. By selecting top engineers, skilled
+          technicians, and well-trained workers, we continuously develop our
+          team to stay current with modern construction technologies. This
+          commitment helps us deliver the highest level of customer
+          satisfaction.
+        </p>
+      </div>
+      <div class="col-md-6 our-vision">
+        <h3>our vision</h3>
+        <p>
+          With over 20 years of experience in the construction industry, we
+          understand the common challenges that impact customer satisfaction and
+          project success. Our vision is to set new standards in construction,
+          focusing on quality, efficiency, and reliability to exceed customer
+          expectations.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Postcard -->
+<div class="postcard-section">
+  <div class="container">
+    <article class="postcard light blue">
+      <img
+        class="postcard__img"
+        src="assets/imgs/building.jpg"
+        alt="Image Title"
+      />
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue">Our strength</h1>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">
+          We pride ourselves on choosing the best talent, from engineers and
+          technicians to trained workers, and on our commitment to continuous
+          team development. By staying updated with modern technologies, we
+          ensure that our team is equipped to handle evolving industry demands,
+          maintaining high standards across all our projects.
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- Statistics Section -->
+<div class="statistics" #statisticsSection>
+  <div class="row justify-content-center">
+    <div
+      class="stat-content col-sm-2"
+      *ngFor="let stat of stats; let i = index"
+    >
+      <div class="icon-container">
+        <span class="material-symbols-outlined">{{ stat.icon }}</span>
+      </div>
+      <h1 [attr.id]="'stat-' + i">0</h1>
+      <p class="subtitle">{{ stat.label }}</p>
+    </div>
+  </div>
+</div>
