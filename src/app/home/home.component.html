@@ -12,7 +12,7 @@
             <h1 class="cinzel-decorative">
               <span
                 *ngFor="
-                  let word of 'build &nbsp; wise &nbsp; for&nbsp; constructing&nbsp; and&nbsp; marketing'.split(
+                  let word of 'build &nbsp; wise &nbsp; for&nbsp; constructing'.split(
                     ' '
                   );
                   let i = index
@@ -50,8 +50,8 @@
         <div class="content container">
           <h1>build wise company</h1>
           <p>
-            We are committed not only to providing high-quality products and
-            services, but also to going above and beyond to ensure complete
+            We are committed not only to providing high quality products and
+            services, but also to going the extra mile to ensure complete
             customer satisfaction.
           </p>
         </div>
@@ -76,46 +76,13 @@
         </div>
       </div>
       <div class="row cards-container">
-        <div class="col-sm-4">
-          <div class="card">
-            <img src="assets/imgs/s2.jpg" alt="serviceImg" />
+        <div *ngFor="let service of mainServices" class="col-sm-4">
+          <div class="card" (click)="navigateToService(service.id)">
+            <img [src]="service.img" alt="serviceImg" />
             <div class="overlay"></div>
             <div class="card-content">
-              <h2>supply of construction materials</h2>
-              <p>
-                We provide top-quality construction materials to support your
-                projects, ensuring durability, safety, and long-term value for
-                your building needs.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <img src="assets/imgs/s4.jpg" alt="serviceImg" />
-            <div class="overlay"></div>
-            <div class="card-content">
-              <h2>engineering services</h2>
-              <p>
-                Offering expert engineering solutions tailored to your specific
-                project requirements, from initial design to completion,
-                ensuring excellence in execution.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <img src="assets/imgs/s3.jpg" alt="serviceImg" />
-            <div class="overlay"></div>
-            <div class="card-content">
-              <h2>Specialized Construction</h2>
-              <p>
-                Combining innovation and expertise, we deliver specialized
-                construction services, including post-tensioning, elastomeric
-                bearing, and expansion joints, for optimal structural
-                performance.
-              </p>
+              <h2>{{ service.name }}</h2>
+              <p>{{ service.description }}</p>
             </div>
           </div>
         </div>

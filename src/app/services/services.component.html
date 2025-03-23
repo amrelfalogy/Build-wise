@@ -78,85 +78,16 @@
       </div>
     </div>
     <div class="row cards-container">
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/tensioning.jpg" alt="serviceImg" />
+      <div class="col-sm-4" *ngFor="let service of mainServices">
+        <div class="card" (click)="navigateToService(service)">
+          <img [src]="service.img" alt="{{ service.name }}" />
           <div class="overlay"></div>
           <div class="card-content">
-            <h2>Post Tensioning (Building)</h2>
-            <p>
-              Specialized in post-tensioning for buildings, delivering
-              comprehensive design, supply, and installation services that
-              enhance structural strength and flexibility.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/new-s2.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>
-              Elastomeric Bearing <br />
-              (Building & Bridges)
-            </h2>
-            <p>
-              Ensuring superior load distribution and movement control in
-              buildings and bridges, our elastomeric bearing services cover
-              design, supply, and installation.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/new-s.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>
-              Expansion Joint <br />
-              (Building & Bridges)
-            </h2>
-            <p>
-              Our expansion joint services protect buildings and bridges from
-              thermal expansion and contraction, offering full design, supply,
-              and installation.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/s2.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>supply of construction materials</h2>
-            <p>
-              We provide top-quality construction materials to support your
-              projects, ensuring durability, safety, and long-term value for
-              your building needs.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/s4.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>engineering services</h2>
-            <p>
-              Offering expert engineering solutions tailored to your specific
-              project requirements, from initial design to completion, ensuring
-              excellence in execution.
-            </p>
+            <h2>{{ service.name }}</h2>
+            <p>{{ service.description }}</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="btn">
-      <button class="mybtn" routerLink="/">view all services</button>
-    </div> -->
   </div>
 </div>

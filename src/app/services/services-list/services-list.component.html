@@ -1,0 +1,105 @@
+<!-- Hero Section -->
+<div class="row">
+  <div class="col-md-12">
+    <section
+      class="header img-fluid"
+      style="background-image: url('assets/imgs/bw.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content" *ngIf="subServiceDetails">
+        <h1 class="title">{{ subServiceDetails.name }}</h1>
+        <h3>
+          <a routerLink="/home" style="color: inherit; text-decoration: none"
+            >Home</a
+          >
+          - <span> {{ subServiceDetails.name }} </span>
+        </h3>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="container">
+  <!-- 🟡 Display SubService Details -->
+  <div *ngIf="subServiceDetails" class="details-section">
+    <!-- Details -->
+    <div *ngIf="subServiceDetails.details?.length" class="details-container">
+      <div *ngFor="let detail of subServiceDetails.details" class="detail-card">
+        <h4>{{ detail.title }}</h4>
+        <p>{{ detail.content }}</p>
+      </div>
+    </div>
+
+    <!-- Components Section -->
+    <div *ngIf="subServiceDetails.components?.length" class="section">
+      <h3 class="section-title">Components</h3>
+      <div class="components-container">
+        <div
+          *ngFor="let component of subServiceDetails.components"
+          class="component-item"
+        >
+          <div class="component-title">
+            <h4 class="component-name">{{ component.name }}</h4>
+            <p class="component-description" *ngIf="component.description">
+              {{ component.description }}
+            </p>
+          </div>
+
+          <div class="image-gallery" *ngIf="component.images?.length">
+            <img
+              *ngFor="let img of component.images"
+              [src]="'assets/imgs/' + img"
+              alt="{{ component.name }}"
+              class="gallery-image"
+            />
+          </div>
+
+          <hr class="component-divider" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Types -->
+    <div *ngIf="subServiceDetails.types?.length" class="section">
+      <h3 class="section-title">Types</h3>
+      <div class="grid">
+        <div *ngFor="let type of subServiceDetails.types" class="item-card">
+          <h4>{{ type.name }}</h4>
+          <p>{{ type.description }}</p>
+        </div>
+        <hr class="component-divider" />
+      </div>
+    </div>
+
+    <!-- Applications -->
+    <div *ngIf="subServiceDetails.applications?.length" class="section">
+      <h3 class="section-title">Applications</h3>
+      <div class="grid">
+        <div
+          *ngFor="let app of subServiceDetails.applications"
+          class="item-card"
+        >
+          <p>{{ app.description }}</p>
+          <hr class="component-divider" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 🟡 Services List -->
+<div class="container-fluid">
+  <div class="services-section">
+    <h3 class="section-title">Services</h3>
+    <div class="services-grid">
+      <div
+        class="service-card"
+        *ngFor="let service of services"
+        (click)="navigateToServiceDetail(service)"
+      >
+        <img [src]="service.img" alt="{{ service.name }}" class="service-img" />
+        <h4 class="service-name">{{ service.name }}</h4>
+      </div>
+    </div>
+  </div>
+</div>

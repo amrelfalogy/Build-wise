@@ -1,0 +1,49 @@
+<!-- Hero Section -->
+<div class="row">
+  <div class="col-md-12">
+    <section
+      class="header img-fluid"
+      style="background-image: url('assets/imgs/bw.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content">
+        <h1>Services</h1>
+        <h3>
+          <a routerLink="/home" style="color: inherit; text-decoration: none"
+            >Home</a
+          >
+          <!-- - <span> {{ service.name }} </span> -->
+        </h3>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title mb-30">
+          <span>let's know about</span>
+          <h1>Specialized construction</h1>
+          <p>
+            Combining innovation and expertise, we deliver specialized
+            construction services, including post-tensioning, elastomeric
+            bearings, and expansion joints for optimal structural performance.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row cards-container">
+      <div class="col-sm-5" *ngFor="let subService of subServices">
+        <div class="card" (click)="navigateToServices(subService)">
+          <img [src]="subService.img" alt="{{ subService.name }}" />
+          <div class="overlay"></div>
+          <div class="card-content">
+            <h2>{{ subService.name }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

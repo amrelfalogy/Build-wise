@@ -77,6 +77,9 @@
         <li *ngFor="let material of project.constructionMaterials">
           <strong>{{ material.name }}:</strong> {{ material.description }}
         </li>
+        <li>
+          <strong>Total Building Area:</strong> {{ project.buildingarea }}
+        </li>
       </ul>
     </div>
   </div>

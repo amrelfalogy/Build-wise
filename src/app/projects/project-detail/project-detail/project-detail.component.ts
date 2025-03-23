@@ -42,25 +42,16 @@ export class ProjectDetailComponent implements OnInit {
         'assets/imgs/projects/alshaya14.jpeg',
         // Add other images
       ],
-      location: 'Al Mirqab District, Kuwait City, Kuwait',
+      location: 'Al MANGAF District, Kuwait City, Kuwait',
       description:
-        'The Al Shaya Tower, also known as Burj Alshaya, is a landmark development in Kuwait City, Kuwait. This iconic complex comprises two main towers: West Tower with 45 floors and East Tower with 22 floors.',
-      completionYear: '2017',
+        'Al Shaya Tower is a landmark development in al mangaf, Kuwait. This iconic complex comprises two main towers: West Tower with 25 floors and East Tower with 22 floors.',
+      completionYear: '2018',
+      buildingarea: '30,000 Sqm',
       constructionMaterials: [
         {
           name: 'Post-Tensioning Concrete',
           description:
             'Used to enhance the structural strength of both towers.',
-        },
-        {
-          name: 'Elastomeric Bearings',
-          description:
-            'Applied for movement control and load distribution in buildings.',
-        },
-        {
-          name: 'Expansion Joints',
-          description:
-            'Implemented for thermal movement management, ensuring longevity and durability.',
         },
       ],
     };

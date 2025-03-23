@@ -1,0 +1,52 @@
+<!-- Hero Section -->
+<div class="row">
+  <div class="col-md-12">
+    <section
+      class="header img-fluid"
+      style="background-image: url('assets/imgs/bw.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content">
+        <h1>{{ service?.name }}</h1>
+        <h3>
+          <a routerLink="/home" style="color: inherit; text-decoration: none"
+            >Home</a
+          >
+          - <span>{{ service?.name }}</span>
+        </h3>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Content Section -->
+<div class="container content-details mt-5">
+  <div class="row">
+    <div class="col-lg-7" style="padding-bottom: 20px">
+      <div class="description-box">
+        <h2 class="section-title">Description</h2>
+        <p [innerHTML]="service?.description" class="description-text"></p>
+      </div>
+
+      <div class="info-box">
+        <p><strong>📌 Scope: </strong></p>
+        <p [innerHTML]="service?.scope" style="padding: 10px 0 20px">
+          {{ service?.scope }}
+        </p>
+        <!-- <div class="data-sheet-box" *ngIf="selectedService?.dataSheet">
+          <p><strong>📄 Data Sheet:</strong> <a [href]="selectedService?.dataSheet" target="_blank">Download</a></p>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="col-lg-5" style="padding-bottom: 20px">
+      <div class="image-box">
+        <img
+          [src]="service?.img"
+          alt="{{ service?.name }}"
+          class="img-fluid rounded"
+        />
+      </div>
+    </div>
+  </div>
+</div>
