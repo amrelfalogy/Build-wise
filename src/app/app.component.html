@@ -1,1 +1,7 @@
-<app-layout></app-layout>
+<div *ngIf="isLoading" class="loading-container">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+  
+  <div *ngIf="!isLoading">
+    <app-layout></app-layout>
+  </div>

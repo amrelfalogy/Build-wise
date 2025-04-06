@@ -39,6 +39,7 @@ h1 {
   opacity: 0;
   transform: translateY(20px); /* Start below */
   animation: wordAnimation 1s ease forwards;
+  margin: 8px 0px;
 }
 
 @keyframes wordAnimation {
@@ -160,7 +161,7 @@ h1 {
 .header-content {
   display: flex;
   flex-direction: column;
-  padding-top: 110px;
+  padding-top: 120px;
 }
 @media (max-width: 768px) {
   .notice {

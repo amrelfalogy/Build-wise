@@ -8,6 +8,9 @@ import { ViewportScroller } from '@angular/common';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+
+  isLoading = true;
+
   title = 'Build Wise';
   constructor(
     private router: Router,
@@ -15,6 +18,11 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.isLoading = false;
+    },
+      2000
+    );
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         this.viewportScroller.scrollToPosition([0, 0]);
