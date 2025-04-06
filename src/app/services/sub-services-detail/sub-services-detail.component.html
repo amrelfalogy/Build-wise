@@ -36,20 +36,12 @@
         <p [innerHTML]="service?.scope" class="info-text" style="padding: 10px 0 20px">
           {{ service?.scope }}
         </p>
-        <!-- <div class="data-sheet-box" *ngIf="selectedService?.dataSheet">
-          <p><strong>📄 Data Sheet:</strong> <a [href]="selectedService?.dataSheet" target="_blank">Download</a></p>
-        </div> -->
+       
       </div>
     </div>
 
     <div class="col-lg-5" style="padding-bottom: 20px">
-      <!-- <div class="image-box">
-        <img
-          [src]="service?.img"
-          alt="{{ service?.name }}"
-          class="img-fluid rounded"
-        />
-      </div> -->
+
       <div *ngIf="service?.imgs?.length" class="image-box">
         <img
           *ngFor="let img of service?.imgs"
