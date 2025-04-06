@@ -8,7 +8,6 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { CartComponent } from '../cart/cart.component';
 
 @Component({
   selector: 'app-layout',
@@ -16,9 +15,7 @@ import { CartComponent } from '../cart/cart.component';
   styleUrls: ['./layout.component.css'],
 })
 export class LayoutComponent implements OnInit {
-  cartComponent = {
-    isVisible: false,
-  };
+ 
   isHomePage: boolean = false;
   isAtTop: boolean = true;
   isNavbarVisible = true;
@@ -42,6 +39,7 @@ export class LayoutComponent implements OnInit {
   openMessageDialog(): void {
     this.dialog.open(MessageDialogComponent, {
       width: '740px',
+      disableClose: false,
     });
   }
 
@@ -72,13 +70,5 @@ export class LayoutComponent implements OnInit {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
 
-  onCartClick(): void {
-    this.cartComponent.isVisible = !this.cartComponent.isVisible;
-
-    if (this.cartComponent.isVisible) {
-      this.router.navigate(['/cart']); // Load cart module
-    } else {
-      this.router.navigate(['/']); // Go back to another route when cart is hidden
-    }
-  }
+  
 }

@@ -3,7 +3,7 @@
   <div class="col-md-12">
     <section
       class="header img-fluid"
-      style="background-image: url('assets/imgs/bw.jpg')"
+      style="background-image: url('assets/imgs/bw.webp')"
     >
       <div class="overlay"></div>
       <div class="header-content">
@@ -34,16 +34,21 @@
         </div>
       </div>
     </div>
-    <div class="row cards-container">
-      <div class="col-sm-5" *ngFor="let subService of subServices">
-        <div class="card" (click)="navigateToServices(subService)">
-          <img [src]="subService.img" alt="{{ subService.name }}" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>{{ subService.name }}</h2>
-          </div>
+   <!-- 🟡 Services List -->
+    <div class="container-fluid">
+    <div class="services-section">
+      <div class="services-grid">
+        <div
+          class="service-card"
+          *ngFor="let subService of subServices"
+          (click)="navigateToServices(subService)"
+        >
+          <img [src]="subService.img" alt="{{ subService.name }}" class="service-img" />
+          <h4 class="service-name">{{ subService.name }}</h4>
         </div>
       </div>
     </div>
+    </div>
+    
   </div>
 </div>

@@ -58,15 +58,16 @@
         </mat-error>
       </mat-form-field>
 
+      <!-- Submit Button -->
       <button
         mat-raised-button
         color="primary"
         type="submit"
-        [disabled]="messageForm.invalid"
-        class="btn"
-        style="width: 90%; margin-top: 10px"
+        [disabled]="loading"
+        style="width: 100%; margin-top: 10px"
       >
-        Send
+        <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+        <span *ngIf="!loading">Send Message</span>
       </button>
     </div>
   </form>

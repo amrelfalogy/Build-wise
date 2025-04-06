@@ -16,6 +16,11 @@ export class ServicesComponent {
   }
 
   navigateToService(service: MainService) {
+    if (service.id === 3) {
+      this.router.navigate(['/coming-soon']);
+      return;
+    }
+
     if (service.subServices && service.subServices.length > 0) {
       this.router.navigate(['/services', service.id, 'sub-services']);
     } else {

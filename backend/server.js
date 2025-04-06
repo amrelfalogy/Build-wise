@@ -21,6 +21,17 @@ app.get("/", (req, res) => {
 // Endpoint to send email
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
+  
+  // Validate input data
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
+
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ error: "Invalid email format" });
+  }
 
   const transporter = nodemailer.createTransport({
     service: "gmail",

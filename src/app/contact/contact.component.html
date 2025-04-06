@@ -36,21 +36,21 @@
             <div class="icon-container">
               <span class="material-symbols-outlined"> email </span>
             </div>
-            <a href="mailto:inchaatcompany@gmail.com"
-              >inchaatcompany&#64;gmail.com</a
+            <a href="mailto:info@buildwgroup.com"
+              >info&#64;buildwgroup.com</a
             >
           </div>
           <div class="phone-container col-sm-3">
             <div class="icon-container">
               <span class="material-symbols-outlined"> phone </span>
             </div>
-            <a href="/">+965 509 121</a>
+            <a href="tel:00966502668615">+966 50 266 8615</a>
           </div>
           <div class="whatsapp-container col-sm-4">
             <div class="icon-container">
               <fa-icon [icon]="faWhatsapp" class="whatsapp-icon"></fa-icon>
             </div>
-            <a href="https://wa.me/01016852128"> +965 509 121</a>
+            <a href="https://wa.me/00966502668615"> +966 50 266 8615</a>
           </div>
         </div>
       </div>
@@ -152,8 +152,9 @@
             </div>
           </div>
 
-          <button type="submit" class="btn" [disabled]="contactForm.invalid">
-            Submit
+          <button type="submit" class="btn" [disabled]="contactForm.invalid || isSubmitting">
+            <span *ngIf="!isSubmitting">Submit</span>
+            <span *ngIf="isSubmitting">Submitting...</span>
           </button>
         </div>
       </form>

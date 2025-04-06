@@ -3,11 +3,16 @@
   <div class="col-md-12">
     <section
       class="header img-fluid"
-      style="background-image: url('assets/imgs/bw.jpg')"
+      [ngStyle]="{
+        'background-image': subServiceDetails?.bgImg
+          ? 'url(' + subServiceDetails?.bgImg + ')'
+          : ('assets/imgs/bw.webp')
+      }"      
+      style="background-image: url('assets/imgs/bw.webp')"
     >
       <div class="overlay"></div>
-      <div class="header-content" *ngIf="subServiceDetails">
-        <h1 class="title">{{ subServiceDetails.name }}</h1>
+      <div class="header-content" *ngIf="subServiceDetails; else fallbackTitle">
+        <h1 class="title"> {{ subServiceDetails.name }}</h1>
         <h3>
           <a routerLink="/home" style="color: inherit; text-decoration: none"
             >Home</a
@@ -15,6 +20,11 @@
           - <span> {{ subServiceDetails.name }} </span>
         </h3>
       </div>
+      <ng-template #fallbackTitle>
+        <h1 class="title" style="color: white; font-size: 40px; font-weight: 700; text-transform: uppercase; z-index: 2; ">supply of construction </h1>
+       
+      </ng-template>
+      
     </section>
   </div>
 </div>
@@ -25,8 +35,8 @@
     <!-- Details -->
     <div *ngIf="subServiceDetails.details?.length" class="details-container">
       <div *ngFor="let detail of subServiceDetails.details" class="detail-card">
-        <h4>{{ detail.title }}</h4>
-        <p>{{ detail.content }}</p>
+        <h4 class="section-title">{{ detail.title }}</h4>
+        <p [innerHTML]="detail.content" >{{ detail.content }}</p>
       </div>
     </div>
 
@@ -40,7 +50,7 @@
         >
           <div class="component-title">
             <h4 class="component-name">{{ component.name }}</h4>
-            <p class="component-description" *ngIf="component.description">
+            <p [innerHTML]="component.description" class="component-description" *ngIf="component.description">
               {{ component.description }}
             </p>
           </div>
@@ -65,7 +75,7 @@
       <div class="grid">
         <div *ngFor="let type of subServiceDetails.types" class="item-card">
           <h4>{{ type.name }}</h4>
-          <p>{{ type.description }}</p>
+          <p [innerHTML]="type.description">{{ type.description }}</p>
         </div>
         <hr class="component-divider" />
       </div>
@@ -74,13 +84,13 @@
     <!-- Applications -->
     <div *ngIf="subServiceDetails.applications?.length" class="section">
       <h3 class="section-title">Applications</h3>
-      <div class="grid">
+      <div class="grid applications-grid">
         <div
           *ngFor="let app of subServiceDetails.applications"
           class="item-card"
         >
-          <p>{{ app.description }}</p>
-          <hr class="component-divider" />
+          <p [innerHTML]="app.description">{{ app.description }}</p>
+          
         </div>
       </div>
     </div>
@@ -90,7 +100,7 @@
 <!-- 🟡 Services List -->
 <div class="container-fluid">
   <div class="services-section">
-    <h3 class="section-title">Services</h3>
+    <h3 class="section-title" style="text-decoration: none;">Services</h3>
     <div class="services-grid">
       <div
         class="service-card"

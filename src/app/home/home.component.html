@@ -60,38 +60,35 @@
   </section>
 
   <!-- ************  services section  ********  -->
-  <div class="services-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title mb-30">
-            <span>let's know about</span>
-            <h1>our services</h1>
-            <p>
-              Discover our commitment to excellence in construction services,
-              from high-quality materials supply to specialized engineering
-              solutions.
-            </p>
-          </div>
+  
+<div class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title mb-30">
+          <span>let's know about</span>
+          <h1>our services</h1>
+          <p>
+            with offering reliable solutions tailored to meet the needs of
+            modern building and infrastructure projects. We focus on quality,
+            precision, and delivering results that exceed expectations.
+          </p>
         </div>
       </div>
-      <div class="row cards-container">
-        <div *ngFor="let service of mainServices" class="col-sm-4">
-          <div class="card" (click)="navigateToService(service.id)">
-            <img [src]="service.img" alt="serviceImg" />
-            <div class="overlay"></div>
-            <div class="card-content">
-              <h2>{{ service.name }}</h2>
-              <p>{{ service.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="btn">
-        <button class="mybtn" routerLink="/services">view all services</button>
+    </div>
+    <div class="services-grid">
+      <div
+        class="service-card"
+        *ngFor="let service of mainServices"
+        (click)="navigateToService(service)"
+      >
+        <img [src]="service.img" alt="{{ service.name }}" class="service-img" />
+        <h4 class="service-name">{{ service.name }}</h4>
       </div>
     </div>
   </div>
+</div>
+
 
   <!-- parallax -->
   <div class="parallax-section row">

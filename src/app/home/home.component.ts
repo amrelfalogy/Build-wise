@@ -19,11 +19,18 @@ export class HomeComponent implements OnInit {
     this.mainServices = this.serviceService.getServices();
   }
 
-  navigateToService(id: number) {
-    if (id === 3) return; // Engineering Services doesn't navigate
-    this.router.navigate(['/services', id]);
-  }
+  navigateToService(service: MainService) {
+    if (service.id === 3) {
+      this.router.navigate(['/coming-soon']);
+      return;
+    }
 
+    if (service.subServices && service.subServices.length > 0) {
+      this.router.navigate(['/services', service.id, 'sub-services']);
+    } else {
+      this.router.navigate(['/services', service.id, 'services']);
+    }
+  }
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const sections = document.querySelectorAll('.section');

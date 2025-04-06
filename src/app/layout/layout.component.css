@@ -88,29 +88,28 @@
   font-size: 24px;
 }
 
-.btn {
-  width: 100%;
-  cursor: auto;
-  border: none;
-  padding-right: 0;
-  .mybtn {
-    font-size: 13px;
-    width: 95px;
-    height: 47px;
-    padding: 5px;
+.btn.mybtn {
+    font-size: 14px;
+    font-weight: 500;
+    /* width: 95px;
+    height: 47px; */
+    padding: 10px 20px;
     color: #001f3f;
     background-color: #f4f4f4;
-    border: 1px solid #f4f4f4;
+    border: none;
+    transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
   }
   .mybtn:hover {
     background-color: white;
     color: #001f3f;
     font-weight: 500;
-    transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    border: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        border: none;
   }
-}
+
 
 /* Footer Styling */
 footer {

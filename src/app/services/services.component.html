@@ -68,7 +68,7 @@
       <div class="col-md-12">
         <div class="title mb-30">
           <span>let's know about</span>
-          <h1>our construction services</h1>
+          <h1>our services</h1>
           <p>
             with offering reliable solutions tailored to meet the needs of
             modern building and infrastructure projects. We focus on quality,
@@ -77,16 +77,14 @@
         </div>
       </div>
     </div>
-    <div class="row cards-container">
-      <div class="col-sm-4" *ngFor="let service of mainServices">
-        <div class="card" (click)="navigateToService(service)">
-          <img [src]="service.img" alt="{{ service.name }}" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>{{ service.name }}</h2>
-            <p>{{ service.description }}</p>
-          </div>
-        </div>
+    <div class="services-grid">
+      <div
+        class="service-card"
+        *ngFor="let service of mainServices"
+        (click)="navigateToService(service)"
+      >
+        <img [src]="service.img" alt="{{ service.name }}" class="service-img" />
+        <h4 class="service-name">{{ service.name }}</h4>
       </div>
     </div>
   </div>

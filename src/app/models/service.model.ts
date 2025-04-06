@@ -19,6 +19,8 @@ export interface SubService {
   components?: serviceComponent[];
   types?: serviceType[];
   services?: Service[];
+  imgs?: string[];
+  bgImg?: string;
 }
 
 export interface Service {
@@ -28,6 +30,8 @@ export interface Service {
   scope?: string;
   dataSheet?: string;
   img: string;
+  imgs?: string[]; 
+  bgImg?: string;
 }
 
 export interface serviceDetails {

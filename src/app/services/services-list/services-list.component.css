@@ -4,7 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 465px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +34,14 @@
   margin-bottom: 11px;
   text-transform: uppercase;
 }
+#fallbackTitle h1.title {
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 11px;
+  z-index: 22;
+  text-transform: uppercase;
+}
 
 .header-content h3 {
   font-size: 16px;
@@ -48,7 +56,7 @@
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: start;
 }
 
@@ -63,6 +71,9 @@ p {
   font-size: 16px;
   color: #555;
   width: 85%;
+}
+.applications-grid p{
+  font-size: 1.2rem;  
 }
 
 /* Section */
@@ -81,8 +92,9 @@ p {
 /* ✅ General Section Styling */
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: underline;
   color: #242424;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -102,7 +114,7 @@ p {
 
 /* ✅ Name & Description */
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #222;
 }
@@ -124,11 +136,10 @@ h4 {
 }
 
 .gallery-image {
-  width: 220px;
-  height: 145px;
+  width: 174px;
+  height: 112px;
   border-radius: 0;
-  object-fit: cover;
-  border: 2px solid #d3d3d3;
+  border: 1px solid #d3d3d3;
 }
 
 /* ✅ Horizontal Line */
@@ -146,7 +157,7 @@ h4 {
 /* ✅ Services Section Styling */
 .services-section {
   background: #f2f2f3;
-  padding: 30px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -181,7 +192,6 @@ h4 {
   width: 158px;
   height: 158px;
   border-radius: 50%;
-  object-fit: cover; /* Ensures full image coverage */
   border: 3px solid #a4a097;
 }
 
@@ -195,5 +205,5 @@ h4 {
 }
 .container-fluid {
   padding: 0;
-  margin: 80px 0;
+  /* margin-bottom: 80px; */
 }

@@ -26,10 +26,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./about-us/about-us.module').then((m) => m.AboutUsModule),
   },
-  {
-    path: 'cart',
-    loadChildren: () => import('./cart/cart.module').then((m) => m.CartModule),
-  },
+
   {
     path: 'coming-soon',
     loadChildren: () =>
