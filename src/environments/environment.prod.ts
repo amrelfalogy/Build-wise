@@ -1,4 +1,4 @@
 export const environment = {
-    production: true,
-    apiBaseUrl: 'https://buildwgroup.com/api',
-  };
+  production: true,
+  apiBaseUrl: 'https://buildwgroup.com/backend',
+};

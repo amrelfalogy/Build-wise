@@ -10,7 +10,7 @@ export class ServiceService {
       id: 1,
       name: 'Specialized Construction',
       description:
-        'Combining innovation and expertise, we deliver specialized construction services, including post-tensioning, elastomeric bearings, and expansion joints for optimal structural performance.',
+        'Combining innovation and expertise, we deliver specialized construction services, including post-tensioning, and Retained Earth for optimal structural performance.',
       img: 'assets/imgs/eng.webp',
       subServices: [
         {
